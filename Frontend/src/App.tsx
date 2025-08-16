@@ -67,7 +67,8 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <HeroSection />
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        {/* <div className="grid lg:grid-cols-1 "> */}
+        <div className="flex justify-center">
           <VehicleDetailsForm
             carDetails={carDetails}
             onInputChange={handleInputChange}
@@ -75,7 +76,7 @@ function App() {
             isLoading={isLoading}
             isFormValid={isFormValid}
           />
-          
+          </div>
           {estimatedPrice !== null && (
             <div className="mt-4 p-4 bg-white shadow rounded-lg text-center">
               <h3 className="text-lg font-semibold text-gray-700">
@@ -85,7 +86,6 @@ function App() {
           )}
 
 
-        </div>
 
         <FeaturesSection />
       </main>
